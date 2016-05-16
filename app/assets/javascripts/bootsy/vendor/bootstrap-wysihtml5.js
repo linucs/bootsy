@@ -2,30 +2,59 @@
     "use strict";
 
     var tpl = {
-        "font-styles": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li class='dropdown'>" +
-              "<a class='btn btn-default dropdown-toggle" + size + "' data-toggle='dropdown' href='#' title='" + locale.font_styles.title + "'>" +
-              "<i class='glyphicon glyphicon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;<b class='caret'></b>" +
-              "</a>" +
-              "<ul class='dropdown-menu'>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div' tabindex='-1' role='menuitem'>" + locale.font_styles.normal + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1' tabindex='-1' role='menuitem'>" + locale.font_styles.h1 + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2' tabindex='-1' role='menuitem'>" + locale.font_styles.h2 + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3' tabindex='-1' role='menuitem'>" + locale.font_styles.h3 + "</a></li>" +
-              "</ul>" +
-            "</li>";
-        },
+      "font-styles": function(locale, options) {
+          var size = (options && options.size) ? ' btn-'+options.size : '';
+          return "<li class='dropdown'>" +
+            "<a class='btn btn-default dropdown-toggle" + size + "' data-toggle='dropdown' href='#' title='" + locale.font_styles.title + "'>" +
+            "<i class='glyphicon glyphicon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;<b class='caret'></b>" +
+            "</a>" +
+            "<ul class='dropdown-menu'>" +
+              "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div' tabindex='-1' role='menuitem'>" + locale.font_styles.normal + "</a></li>" +
+              "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1' tabindex='-1' role='menuitem'>" + locale.font_styles.h1 + "</a></li>" +
+              "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2' tabindex='-1' role='menuitem'>" + locale.font_styles.h2 + "</a></li>" +
+              "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3' tabindex='-1' role='menuitem'>" + locale.font_styles.h3 + "</a></li>" +
+            "</ul>" +
+          "</li>";
+      },
 
-        "emphasis": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-              "<div class='btn-group'>" +
-                "<a class='btn btn-default " + size + "' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'>" + locale.emphasis.bold + "</a>" +
-                "<a class='btn btn-default " + size + "' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'>" + locale.emphasis.italic + "</a>" +
-                "<a class='btn btn-default " + size + "' data-wysihtml5-command='underline' title='CTRL+U' tabindex='-1'>" + locale.emphasis.underline + "</a>" +
-              "</div>" +
-            "</li>";
+      "buttons": function(locale, options) {
+          var size = (options && options.size) ? ' btn-'+options.size : '';
+          return "<li class='dropdown'>" +
+            "<a class='btn btn-default dropdown-toggle" + size + "' data-toggle='dropdown' href='#' title='" + locale.buttons.title + "'>" +
+            "<i class='glyphicon glyphicon-link'></i><b class='caret'></b>" +
+            "</a>" +
+            "<ul class='dropdown-menu'>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-default' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='default' tabindex='-1' role='menuitem'>" + locale.buttons.default + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-primary' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='primary' tabindex='-1' role='menuitem'>" + locale.buttons.primary + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-success' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='success' tabindex='-1' role='menuitem'>" + locale.buttons.success + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-info' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='info' tabindex='-1' role='menuitem'>" + locale.buttons.info + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-warning' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='warning' tabindex='-1' role='menuitem'>" + locale.buttons.warning + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-danger' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='danger' tabindex='-1' role='menuitem'>" + locale.buttons.danger + "</a></div></li>" +
+              "<li><div class='wysihtml5-buttons'><a class='btn btn-sm btn-block btn-link' data-wysihtml5-command='insertButton' data-wysihtml5-command-value='link' tabindex='-1' role='menuitem'>" + locale.buttons.link + "</a></div></li>" +
+            "</ul>" +
+          "</li>";
+      },
+
+      "text-justify": function(locale, options) {
+          var size = (options && options.size) ? ' btn-'+options.size : '';
+          return "<li>" +
+            "<div class='btn-group'>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='justifyLeft' title='" + locale.text_justify.left + "' tabindex='-1'><i class='glyphicon glyphicon-align-left'></i></a>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='justifyCenter' title='" + locale.text_justify.center + "' tabindex='-1'><i class='glyphicon glyphicon-align-center'></i></a>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='justifyRight' title='" + locale.text_justify.right + "' tabindex='-1'><i class='glyphicon glyphicon-align-right'></i></a>" +
+            "</div>" +
+          "</li>";
+      },
+
+      "emphasis": function(locale, options) {
+          var size = (options && options.size) ? ' btn-'+options.size : '';
+          return "<li>" +
+            "<div class='btn-group'>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'>" + locale.emphasis.bold + "</a>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'>" + locale.emphasis.italic + "</a>" +
+              "<a class='btn btn-default " + size + "' data-wysihtml5-command='underline' title='CTRL+U' tabindex='-1'>" + locale.emphasis.underline + "</a>" +
+            "</div>" +
+          "</li>";
         },
 
         "lists": function(locale, options) {
@@ -407,6 +436,8 @@
 
     var defaultOptions = $.fn.wysihtml5.defaultOptions = {
         "font-styles": true,
+        "text-justify": true,
+        "buttons": true,
         "color": false,
         "emphasis": true,
         "lists": true,

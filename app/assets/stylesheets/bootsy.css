@@ -113,6 +113,10 @@ ul.wysihtml5-toolbar a.wysihtml5-colors-title {
   padding-left: 70px;
 }
 
+ul.wysihtml5-toolbar div.wysihtml5-buttons {
+  margin: 5px;
+}
+
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
   background: black !important;
 }
@@ -237,6 +241,18 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
 .wysiwyg-float-right {
   float: right;
   margin: 0 0 8px 8px;
+}
+
+.wysiwyg-text-align-center {
+  text-align: center;
+}
+
+.wysiwyg-text-align-left {
+  text-align: left;
+}
+
+.wysiwyg-text-align-right {
+  text-align: right;
 }
 
 .bootsy blockquote {

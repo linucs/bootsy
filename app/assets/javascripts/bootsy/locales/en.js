@@ -4,6 +4,7 @@
 (function($){
   $.fn.wysihtml5.locale['en'] = {
     font_styles: {
+      title: 'Text style',
       normal: 'Normal text',
       h1: 'Heading 1',
       h2: 'Heading 2',
@@ -34,6 +35,7 @@
       edit: 'Edit HTML'
     },
     colours: {
+      title: 'Text color',
       black: 'Black',
       silver: 'Silver',
       gray: 'Grey',
@@ -45,6 +47,21 @@
       navy: 'Navy',
       blue: 'Blue',
       orange: 'Orange'
+    },
+    text_justify: {
+      left: 'Align left',
+      center: 'Center horizontally',
+      right: 'Align right'
+    },
+    buttons: {
+      title: 'Make a button',
+      default: 'Default button',
+      primary: 'Primary button',
+      success: 'Success button',
+      info: 'Info button',
+      warning: 'Warning button',
+      danger: 'Danger button',
+      link: 'Link button'
     },
     bootsy: {
       alertUnsaved: 'You have unsaved changes.',

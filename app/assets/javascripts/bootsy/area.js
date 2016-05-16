@@ -13,10 +13,12 @@ Bootsy.Area = function($el) {
   this.options = {
     locale: this.locale,
     alertUnsavedChanges: $el.data('bootsy-alert-unsaved'),
+    skipParser: $el.data('bootsy-skip-parser'),
     uploader: $el.data('bootsy-uploader'),
     color: $el.data('bootsy-color'),
     emphasis: $el.data('bootsy-emphasis'),
     'font-styles': $el.data('bootsy-font-styles'),
+    'text-justify': $el.data('bootsy-text-justify'),
     html: $el.data('bootsy-html'),
     image: $el.data('bootsy-image'),
     link: $el.data('bootsy-link'),

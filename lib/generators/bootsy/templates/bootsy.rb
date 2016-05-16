@@ -5,8 +5,10 @@ Bootsy.setup do |config|
   #   editor_options hash to bootsy_area
   # config.editor_options = {
   #   font_styles: true,
+  #   text_justify: true,
   #   emphasis: true,
   #   lists: true,
+  #   buttons: false,
   #   html: false,
   #   link: true,
   #   image: true,

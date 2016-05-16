@@ -12,7 +12,10 @@ $.extend(true, window.Bootsy.options, $.fn.wysihtml5.defaultOptions, {
     classes: {
       "wysiwyg-float-left": 1,
       "wysiwyg-float-right": 1,
-      "wysiwyg-float-inline": 1
+      "wysiwyg-float-inline": 1,
+      "wysiwyg-text-align-center": 1,
+      "wysiwyg-text-align-left": 1,
+      "wysiwyg-text-align-right": 1
     },
     tags: {
       "cite": {

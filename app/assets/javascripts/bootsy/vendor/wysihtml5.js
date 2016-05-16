@@ -4775,7 +4775,7 @@ wysihtml5.dom.parse = (function() {
     // Insert new DOM tree
     element.appendChild(fragment);
 
-    return isString ? wysihtml5.quirks.getCorrectInnerHTML(element) : element;
+    return this.skipParser ? elementOrHtml : isString ? wysihtml5.quirks.getCorrectInnerHTML(element) : element;
   }
 
   function _convert(oldNode, cleanUp) {
@@ -7603,6 +7603,16 @@ wysihtml5.commands.bold = {
       return wysihtml5.commands.formatBlock.state(composer, "formatBlock", null, CLASS_NAME, REG_EXP);
     }
   };
+})(wysihtml5);(function(wysihtml5) {
+  wysihtml5.commands.insertButton = {
+    exec: function(composer, command, btnType) {
+      return wysihtml5.commands.formatInline.exec(composer, command, "span", "btn btn-" + btnType);
+    },
+
+    state: function(composer, command, btnType) {
+      return wysihtml5.commands.formatInline.state(composer, command, "span", "btn btn-" + btnType);
+    }
+  }
 })(wysihtml5);
 wysihtml5.commands.redo = {
   exec: function(composer) {

@@ -16,8 +16,10 @@ module Bootsy
   mattr_accessor :editor_options
   @@editor_options = {
     font_styles: true,
+    text_justify: true,
     emphasis: true,
     lists: true,
+    buttons: false,
     html: false,
     link: true,
     image: true,

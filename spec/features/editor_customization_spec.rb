@@ -6,6 +6,7 @@ describe 'editor customization', type: :feature, js: true do
       color: ['Black'],
       emphasis: %w(Bold Italic Underline),
       font_styles: ['Normal text'],
+      text_justify: ['Align left', 'Center horizontally', 'Align right'],
       html: ['Edit HTML'],
       image: ['Insert image'],
       link: ['Insert link'],
